@@ -19,7 +19,7 @@ function App() {
 
 
       {/* Middle Section */}
-      <div id="middle" className={`flex-1  flex flex-col lg:ml-[64px]   xl:ml-[212px] xl:mr-[280px] border-l ${theme === "light" ? "border-[#1C1C1C66]" : "border-[#FFFFFF66]"}   `}>
+      <div id="middle" className={`flex-1  flex flex-col   xl:ml-[212px] xl:mr-[280px] border-l ${theme === "light" ? "border-[#1C1C1C66]" : "border-[#FFFFFF66]"}   `}>
         {/* Header */}
         <Header />
 

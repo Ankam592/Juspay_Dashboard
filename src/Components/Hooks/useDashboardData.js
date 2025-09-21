@@ -16,7 +16,6 @@ export const useDashboardData = () => {
         {
             console.log(err)
             setError(err)
-            console.log('received an error in fetching the data')
             setLoading(false)
         })
        

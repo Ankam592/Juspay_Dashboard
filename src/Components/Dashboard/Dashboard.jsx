@@ -15,7 +15,6 @@ export const Dashboard = () => {
     const bg = theme === "light" ? "bg-white" : "bg-[#111111]";
     const txt = theme === "light" ? "text-[#1C1C1C]" : "text-gray-300";
     const iconColor = theme === "light" ? "#1C1C1C" : "#FFFFFF";
-    console.log(information.monthly)
     if (loading) return <p>Loading!</p>
     return (
     <div className={`p-7 gap-7 flex justify-evenly min-w-[892px] items-center flex-wrap ${bg}`}>
