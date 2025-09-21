@@ -1,0 +1,325 @@
+{
+  "meta": {
+    "generated_at": "2025-09-20T09:44:39.233883Z",
+    "source": "synthetic-example-for-assignment"
+  },
+  "kpis": {
+    "customers": 37810000,
+    "customers_change_pct": 11.01,
+    "orders": 12190000,
+    "orders_change_pct": -0.03,
+    "revenue": 29500000,
+    "revenue_change_pct": 15.03,
+    "growth_pct": 30.1
+  },
+  "monthly": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "customers": [
+      8000000,
+      12000000,
+      10000000,
+      15000000,
+      18000000,
+      20000000,
+      22000000,
+      24000000,
+      26000000,
+      27000000,
+      28000000,
+      29000000
+    ],
+    "orders": [
+      4000000,
+      6000000,
+      5000000,
+      9000000,
+      12000000,
+      15000000,
+      16000000,
+      18000000,
+      20000000,
+      22000000,
+      25000000,
+      27000000
+    ],
+    "revenue": [
+      10000000,
+      15000000,
+      12000000,
+      18000000,
+      20000000,
+      25800000,
+      22000000,
+      24000000,
+      26000000,
+      27000000,
+      28000000,
+      29000000
+    ]
+  },
+  "revenue_chart": {
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "current_week": [
+      15000000,
+      10000000,
+      12000000,
+      18000000,
+      20000000,
+      21000000
+    ],
+    "previous_week": [
+      8000000,
+      20000000,
+      16000000,
+      12000000,
+      14000000,
+      25000000
+    ]
+  },
+  "projections_vs_actuals": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "projections": [
+      22000000,
+      18000000,
+      21000000,
+      20000000,
+      28000000,
+      27000000,
+      29000000,
+      30000000,
+      31000000,
+      32000000,
+      32500000,
+      32800000
+    ],
+    "actuals": [
+      18000000,
+      10000000,
+      15000000,
+      13000000,
+      14000000,
+      25800000,
+      22000000,
+      24000000,
+      26000000,
+      27000000,
+      28000000,
+      29000000
+    ]
+  },
+  "revenue_by_location": [
+    {
+      "location": "New York",
+      "value": 22000000
+    },
+    {
+      "location": "San Francisco",
+      "value": 18000000
+    },
+    {
+      "location": "Sydney",
+      "value": 15000000
+    },
+    {
+      "location": "Singapore",
+      "value": 20000000
+    }
+  ],
+  "top_products": [
+    {
+      "name": "ASOS Ridley High Waist",
+      "price": 79.49,
+      "quantity": 82000,
+      "amount": 6518000
+    },
+    {
+      "name": "Marco Lightweight Shirt",
+      "price": 128.5,
+      "quantity": 37000,
+      "amount": 4754500
+    },
+    {
+      "name": "Half Sleeve Shirt",
+      "price": 39.99,
+      "quantity": 64000,
+      "amount": 2559360
+    },
+    {
+      "name": "Lightweight Jacket",
+      "price": 20.0,
+      "quantity": 184000,
+      "amount": 3680000
+    },
+    {
+      "name": "Marco Shoes",
+      "price": 79.49,
+      "quantity": 64000,
+      "amount": 5087360
+    }
+  ],
+  "total_sales_breakdown": [
+    {
+      "channel": "Direct",
+      "value": 12000000
+    },
+    {
+      "channel": "Affiliate",
+      "value": 6000000
+    },
+    {
+      "channel": "Sponsored",
+      "value": 7000000
+    },
+    {
+      "channel": "E-mail",
+      "value": 4000000
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "#CM9801",
+      "user": "Natali Craig",
+      "avatar": "06",
+      "project": "Landing Page",
+      "address": "Meadow Lane Oakland",
+      "date": "2025-09-19T11:05:00Z",
+      "status": "In Progress",
+      "amount": 120000
+    },
+    {
+      "orderId": "#CM9802",
+      "user": "Kate Morrison",
+      "avatar": "07",
+      "project": "CRM Admin pages",
+      "address": "Larry San Francisco",
+      "date": "2025-09-19T10:45:00Z",
+      "status": "Complete",
+      "amount": 240500
+    },
+    {
+      "orderId": "#CM9803",
+      "user": "Drew Cano",
+      "avatar": "08",
+      "project": "Client Project",
+      "address": "Bagwell Avenue Ocala",
+      "date": "2025-09-19T09:30:00Z",
+      "status": "Pending",
+      "amount": 99990
+    },
+    {
+      "orderId": "#CM9804",
+      "user": "Orlando Diggs",
+      "avatar": "09",
+      "project": "Admin Dashboard",
+      "address": "Washburn Baton Rouge",
+      "date": "2025-09-18T16:20:00Z",
+      "status": "Approved",
+      "amount": 499000
+    },
+    {
+      "orderId": "#CM9805",
+      "user": "Andi Lane",
+      "avatar": "10",
+      "project": "App Landing Page",
+      "address": "Nest Lane Olivette",
+      "date": "2025-02-02T08:10:00Z",
+      "status": "Rejected",
+      "amount": 45000
+    },
+    {
+      "orderId": "#CM9806",
+      "user": "Sam Patel",
+      "avatar": "11",
+      "project": "Ecommerce Site",
+      "address": "3rd Street, Boston",
+      "date": "2025-09-17T14:50:00Z",
+      "status": "In Progress",
+      "amount": 310750
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "title": "You have a bug that needs fixing",
+      "time": "Just now",
+      "detail": "Issue in checkout flow"
+    },
+    {
+      "id": 2,
+      "title": "New user registered",
+      "time": "59 minutes ago",
+      "detail": "User: rakesh@example.com"
+    },
+    {
+      "id": 3,
+      "title": "Andi Lane subscribed to you",
+      "time": "Today, 11:59 AM",
+      "detail": ""
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "title": "Released a new version",
+      "time": "59 minutes ago"
+    },
+    {
+      "id": 2,
+      "title": "Submitted a bug",
+      "time": "12 hours ago"
+    },
+    {
+      "id": 3,
+      "title": "Deleted a page in Project X",
+      "time": "Feb 2, 2025"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Natali Craig",
+      "avatar": "https://ui-avatars.com/api/?name=NC"
+    },
+    {
+      "name": "Drew Cano",
+      "avatar": "https://ui-avatars.com/api/?name=DC"
+    },
+    {
+      "name": "Orlando Diggs",
+      "avatar": "https://ui-avatars.com/api/?name=OD"
+    },
+    {
+      "name": "Andi Lane",
+      "avatar": "https://ui-avatars.com/api/?name=AL"
+    },
+    {
+      "name": "Kate Morrison",
+      "avatar": "https://ui-avatars.com/api/?name=KM"
+    }
+  ]
+}
