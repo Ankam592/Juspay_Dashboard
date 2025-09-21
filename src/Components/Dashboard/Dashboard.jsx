@@ -18,9 +18,9 @@ export const Dashboard = () => {
     if (loading) return <p>Loading!</p>
     return (
         <div className={`p-7 gap-7 flex justify-evenly  items-center flex-wrap ${bg}`}>
-            <div className="pl-[90px] w-full h-7 flex justify-start">
+            <div className="pl-[40px] w-full h-7 flex justify-start">
                 <div className="w-[99px] h-7 flex justify-start items-center px-2 py-1">
-                    <p className="font-inter font-semibold text-[14px] leading-[20px] tracking-[0]">eCommerce</p>
+                    <p className={`font-inter font-semibold text-[14px] leading-[20px] tracking-[0] ${txt} `}>eCommerce</p>
                 </div>
             </div>
             <div className="w-full flex justify-evenly items-center flex-wrap  ">
@@ -33,7 +33,7 @@ export const Dashboard = () => {
                 </div>
             </div>
             <div className="w-full h-auto flex justify-evenly items-center flex-wrap">
-                <div className="max-w-[662px] h-auto ">
+                <div className="max-w-[662px] lg:w-[662px]">
                     <RevenueChart data={information.revenue_chart}></RevenueChart>
 
                 </div>
@@ -42,11 +42,11 @@ export const Dashboard = () => {
                 </div>
             </div>
             <div className="w-full h-auto flex justify-evenly items-center flex-wrap">
-                <div className="max-w-[662px]  ">
+                <div className="max-w-[662px] lg:w-[662px]">
                     <TopProducts data={information.top_products}></TopProducts>
 
                 </div>
-                <div className="max-w-[202px] h-auto">
+                <div className="w-[202px] h-auto">
                     <TotalSales data={information.total_sales_breakdown}></TotalSales>
                 </div>
             </div>

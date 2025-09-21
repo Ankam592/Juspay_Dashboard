@@ -64,9 +64,9 @@ export default function OrderList() {
             </div>
 
             <div className="block md:hidden">
-                {paginated.map((order) => (
-                    <div key={order.id} className="border p-4 mb-2 rounded-lg shadow">
-                        <p><strong>Order ID:</strong> {order.id}</p>
+                {paginated.map((order,i) => (
+                    <div key={i} className="border p-4 mb-2 rounded-lg shadow">
+                        <p><strong>Order ID:</strong> {order.orderId}</p>
                         <p><strong>User:</strong> {order.user}</p>
                         <p><strong>Project:</strong> {order.project}</p>
                         <p><strong>Address:</strong> {order.address}</p>
