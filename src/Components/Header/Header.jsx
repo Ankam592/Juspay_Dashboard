@@ -14,7 +14,9 @@ export const Header = () => {
 
   return (
     <div
-      className={`flex items-center justify-between px-7 py-5 gap-4 border-b ${theme === "light" ? "border-[#1C1C1C66] " : "border-[#FFFFFF66] "} ${bg}`}
+className={`flex items-center justify-center md:justify-between h-auto px-7 py-5 gap-4 border-b ${
+  theme === "light" ? "border-[#1C1C1C66]" : "border-[#FFFFFF66]"
+} ${bg} flex-wrap`}
     >
       <div className="flex justify-evenly items-center gap-2 max-w-[256px]">
         <div className="flex justify-start items-center">
@@ -76,7 +78,7 @@ export const Header = () => {
           </div>
         </div>
 
-        <div className="flex justify-start items-center w-[136px] gap-2">
+        <div className="flex justify-start items-center max-w-[136px] gap-2">
           <div className="flex justify-center items-center gap-1 rounded-lg p-1 ">
             <button className="w-5 h-5" onClick={toggleTheme}>
               {theme === "light" ? (

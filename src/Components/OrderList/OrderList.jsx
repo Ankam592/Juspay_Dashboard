@@ -29,7 +29,7 @@ export default function OrderList() {
     const paginated = filtered.slice((page - 1) * pageSize, page * pageSize);
 
     return (
-        <div className={`p-7 gap-3 flex justify-between max-w-[1172px] items-center flex-wrap ${bg} ${txt}`}>
+        <div className={`p-7 gap-3 w-full flex justify-between  items-center flex-wrap ${bg} ${txt}`}>
             <div className=" w-full h-7 flex justify-start rounded-lg">
                 <div className="w-[83px] px-2 py-1 h-7 flex justify-start items-center">
                     <p className="font-inter font-semibold text-[14px] leading-[20px] tracking-[0]">Order List</p>
@@ -58,80 +58,98 @@ export default function OrderList() {
                             onChange={(e) => setSearch(e.target.value)}
                             className="w-full bg-transparent outline-none text-sm text-gray-700"
                         />
-                      
+
                     </div>
                 </div>
             </div>
 
-            <table className="w-full ">
-                <thead>
-                    <tr className={`w-full border-b ${theme === 'light' ? 'text-[#1C1C1C66] border-[1C1C1C33]' : 'text-[#FFFFFF66] border-[#FFFFFF66]'}`}>
-                        <th className="py-2 px-3 w-6 text-left gap-1 ">
-                            <input type="checkbox" className="w-4 h-4" />
+            <div className="block md:hidden">
+                {paginated.map((order) => (
+                    <div key={order.id} className="border p-4 mb-2 rounded-lg shadow">
+                        <p><strong>Order ID:</strong> {order.id}</p>
+                        <p><strong>User:</strong> {order.user}</p>
+                        <p><strong>Project:</strong> {order.project}</p>
+                        <p><strong>Address:</strong> {order.address}</p>
+                        <p><strong>Date:</strong> {order.date}</p>
+                        <p><strong>Status:</strong> {order.status}</p>
+                    </div>
+                ))}
+            </div>
 
-                        </th>
-                        <th className="py-2 px-3 text-left ">Order ID</th>
-                        <th className="py-2 px-4 text-left ">User</th>
-                        <th className="py-2 px-4 text-left ">Project</th>
-                        <th className="py-2 px-4 text-left ">Address</th>
-                        <th className="py-2 px-4 text-left ">Date</th>
-                        <th className="py-2 px-4 text-left ">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {paginated.map((order, idx) => (
-                        <tr
-                            key={idx}
-                            className={`border-b ${theme === 'light' ? 'border-[#1C1C1C0D]' : 'border-[#FFFFFF1A]'} hover:bg-[#1C1C1C0D]`}
-                            onMouseEnter={() => setHovered(true)}
-                            onMouseLeave={() => setHovered(false)}
-                        >
-                            <td className="w-6 h-10 py-2 px-3 text-left">
-                                {hovered && <input type="checkbox" className="w-4 h-4" />}
-                            </td>
-                            <td className="py-2 px-3 ">
-                                {order.orderId}
-                            </td>
-                            <td className="py-2 px-3 ">
-                                <div className="flex items-center gap-2">
-                                    <img
-                                        src={`assets/${order.avatar}.png`}
-                                        alt={order.user}
-                                        className="w-6 h-6 rounded-full"
-                                    />
-                                    {order.user}
-                                </div>
-                            </td>
-                            <td className="py-2 px-3 ">{order.project}</td>
-                            <td className="py-2 px-3 ">{order.address}</td>
-                            <td className="py-2 px-3 ">
-                                {new Date(order.date).toLocaleDateString("en-US", {
-                                    month: "short",
-                                    day: "numeric",
-                                    year: "numeric",
-                                })}
-                            </td>
-                            <td className="py-2 px-3  ">
-                                <span
-                                    className={`px-2 py-1 rounded text-xs font-medium ${order.status === "In Progress"
-                                        ? "text-blue-600"
-                                        : order.status === "Complete"
-                                            ? "text-green-600"
-                                            : order.status === "Pending"
-                                                ? "text-yellow-600"
-                                                : order.status === "Approved"
-                                                    ? "text-orange-600"
-                                                    : "text-red-600"
-                                        }`}
-                                >
-                                    {order.status}
-                                </span>
-                            </td>
+            {/* Normal table only on medium+ screens */}
+            <div className="hidden md:flex w-full">
+                <table className="w-full ">
+                    <thead>
+                        <tr className={`w-full border-b ${theme === 'light' ? 'text-[#1C1C1C66] border-[1C1C1C33]' : 'text-[#FFFFFF66] border-[#FFFFFF66]'}`}>
+                            <th className="py-2 px-3 w-6 text-left gap-1 ">
+                                <input type="checkbox" className="w-4 h-4" />
+
+                            </th>
+                            <th className="py-2 px-3 text-left ">Order ID</th>
+                            <th className="py-2 px-4 text-left ">User</th>
+                            <th className="py-2 px-4 text-left ">Project</th>
+                            <th className="py-2 px-4 text-left ">Address</th>
+                            <th className="py-2 px-4 text-left ">Date</th>
+                            <th className="py-2 px-4 text-left ">Status</th>
                         </tr>
-                    ))}
-                </tbody>
+                    </thead>
+                    <tbody>
+                        {paginated.map((order, idx) => (
+                            <tr
+                                key={idx}
+                                className={`border-b ${theme === 'light' ? 'border-[#1C1C1C0D]' : 'border-[#FFFFFF1A]'} hover:bg-[#1C1C1C0D]`}
+                                onMouseEnter={() => setHovered(true)}
+                                onMouseLeave={() => setHovered(false)}
+                            >
+                                <td className="w-6 h-10 py-2 px-3 text-left">
+                                    {hovered && <input type="checkbox" className="w-4 h-4" />}
+                                </td>
+                                <td className="py-2 px-3 ">
+                                    {order.orderId}
+                                </td>
+                                <td className="py-2 px-3 ">
+                                    <div className="flex items-center gap-2">
+                                        <img
+                                            src={`assets/${order.avatar}.png`}
+                                            alt={order.user}
+                                            className="w-6 h-6 rounded-full"
+                                        />
+                                        {order.user}
+                                    </div>
+                                </td>
+                                <td className="py-2 px-3 ">{order.project}</td>
+                                <td className="py-2 px-3 ">{order.address}</td>
+                                <td className="py-2 px-3 ">
+                                    {new Date(order.date).toLocaleDateString("en-US", {
+                                        month: "short",
+                                        day: "numeric",
+                                        year: "numeric",
+                                    })}
+                                </td>
+                                <td className="py-2 px-3  ">
+                                    <span
+                                        className={`px-2 py-1 rounded text-xs font-medium ${order.status === "In Progress"
+                                            ? "text-blue-600"
+                                            : order.status === "Complete"
+                                                ? "text-green-600"
+                                                : order.status === "Pending"
+                                                    ? "text-yellow-600"
+                                                    : order.status === "Approved"
+                                                        ? "text-orange-600"
+                                                        : "text-red-600"
+                                            }`}
+                                    >
+                                        {order.status}
+                                    </span>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
 
-            </table>
+                </table>
+            </div>
+
+
 
 
             <div className="flex justify-end items-center  gap-2 text-sm">

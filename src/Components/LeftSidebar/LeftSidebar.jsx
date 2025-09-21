@@ -2,11 +2,7 @@ import { useState, useContext } from "react";
 import { ModeContext } from "../../Context/ModeContext";
 import { ModalLayout } from "../ModalLayout/ModalLayout";
 import {
-    FaBars,
-    FaTachometerAlt,
-    FaShoppingCart,
-    FaProjectDiagram,
-    FaBookOpen,
+    FaBars
 } from "react-icons/fa";
 
 export const LeftSidebar = () => {

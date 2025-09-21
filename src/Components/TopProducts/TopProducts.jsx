@@ -14,25 +14,25 @@ export default function TopProducts({ data }) {
                 <table className={`w-full text-sm font-inter ${theme==='light'?'text-black' : 'text-white' }  `}>
                     <thead>
                         <tr className={`w-full  gap-1 border-b  h-10 ${theme === "light" ? "text-[#1C1C1C66] border-[#1C1C1C33]" : "text-[#FFFFFF66] border-[#FFFFFF66]"} `}>
-                            <th className="w-[224px] text-left py-2 pr-4 font-normal">Name</th>
-                            <th className="w-[130px] text-left py-2 pr-4 font-normal">Price</th>
-                            <th className="w-[130px] text-left py-2 pr-4 font-normal">Quantity</th>
-                            <th className="w-[130px] text-left py-2 pr-4 font-normal">Amount</th>
+                            <th className="max-w-[224px] text-left py-2 pr-4 font-normal">Name</th>
+                            <th className="max-w-[130px] text-left py-2 pr-4 font-normal">Price</th>
+                            <th className="max-w-[130px] text-left py-2 pr-4 font-normal">Quantity</th>
+                            <th className="max-w-[130px] text-left py-2 pr-4 font-normal">Amount</th>
                         </tr>
                     </thead>
                     <tbody>
                         {data.map((product, idx) => (
                             <tr key={idx} className={`w-full  gap-1 h-10 rounded-lg ${theme==='light'?'text-black' : 'text-white' }  `}>
-                                <td className="w-[224px] py-2 pr-4 ">{product.name}</td>
-                                <td className="w-[130px] py-2 pr-4 ">
+                                <td className="max-w-[224px] py-2 pr-4 ">{product.name}</td>
+                                <td className="max-w-[130px] py-2 pr-4 ">
                                     ${product.price.toFixed(2)}
                                 </td>
-                                <td className="w-[130px] py-2 pr-4 ">{product.quantity}</td>
-                                <td className="w-[130px] py-2 pr-4 font-medium">
+                                <td className="max-w-[130px] py-2 pr-4 ">{product.quantity}</td>
+                                <td className="max-w-[130px] py-2 pr-4 font-medium">
                                     ${product.amount.toLocaleString(undefined, {
                                         minimumFractionDigits: 2,
                                     })}
-                                </td>
+                                </td>   
                             </tr>
                         ))}
                     </tbody>

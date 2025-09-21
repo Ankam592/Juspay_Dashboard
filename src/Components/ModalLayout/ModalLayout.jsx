@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as PiIcons from "react-icons/pi";
 import * as HiIcons from "react-icons/hi";
@@ -6,10 +6,10 @@ import * as lucide from "lucide-react";
 import { Button } from "../Button/Button";
 import { HiChevronDown, HiChevronRight } from "react-icons/hi";
 import { ModeContext } from "../../Context/ModeContext";
-export const ModalLayout = ({ isModal,onClose }) => {
-     const { theme, toggleTheme } = useContext(ModeContext);
-      const bg = theme === "light" ? "bg-white" : "bg-[#111111]";
-      const txt = theme === "light" ? "text-[#1C1C1C]" : "text-gray-300";
+export const ModalLayout = ({ isModal, onClose }) => {
+    const { theme, toggleTheme } = useContext(ModeContext);
+    const bg = theme === "light" ? "bg-white" : "bg-[#111111]";
+    const txt = theme === "light" ? "text-[#1C1C1C]" : "text-gray-300";
     const Faicons = { ...FaIcons, ...PiIcons, ...HiIcons, ...lucide }
     const [menu, setMenu] = useState([
         {
@@ -106,35 +106,35 @@ export const ModalLayout = ({ isModal,onClose }) => {
         <>
             <aside
                 className={`
-          ${isModal 
-                         ? `fixed top-0 left-0 h-full w-[212px] ${bg} shadow z-50 py-5 px-4 gap-4`
-                       :  `flex flex-col ${bg} ${theme === "light" ? "border-[#1C1C1C66] " : "border-[#FFFFFF66] "}   py-5 px-4  w-[212px] h-full gap-4`}
+          ${isModal
+                        ? `fixed top-0 left-0 h-full w-[212px] ${bg} shadow z-50 py-5 px-4 gap-4`
+                        : `flex flex-col ${bg} ${theme === "light" ? "border-[#1C1C1C66] " : "border-[#FFFFFF66] "}   py-5 px-4  w-[212px] h-full gap-4`}
         `}>
 
-           
+
 
                 <div className="w-full h-[32px] flex justify-start items-center p-1 rounded-lg">
-                    
+
                     <div className="w-1/2 h-full flex justify-between items-center rounded-lg">
                         <div className="w-6 h-6 bg-[url('assets/IconText.png')] rounded-[80px] flex-none order-0 grow-0">
 
                         </div>
                         <div className="flex flex-col justify-center items-start p-0 w-[58px] h-5 rounded-md flex-none order-1 grow-0">
                             <p className={`font-inter font-normal text-sm leading-5 ${txt} tracking-normal`}>  ByeWind</p>
-                          
+
                         </div>
                     </div>
                 </div>
-  <div className={`w-full h-auto flex justify-center items-center pb-3 gap-1 flex-wrap ${txt}`}>
-                <div className="w-full h-auto flex justify-start items-center p-1 rounded-lg gap-2">
-                    <div className="w-1/2 h-full flex justify-between items-center rounded-lg px-2 py-1 gap-1">
-                        <Button className={`w-full h-5 border-none `} value={`Favorites`}>Favorites</Button>
+                <div className={`w-full h-auto flex justify-center items-center pb-3 gap-1 flex-wrap ${txt}`}>
+                    <div className="w-full h-auto flex justify-start items-center p-1 rounded-lg gap-2">
+                        <div className="w-1/2 h-full flex justify-between items-center rounded-lg px-2 py-1 gap-1">
+                            <Button className={`w-full h-5 border-none `} value={`Favorites`}>Favorites</Button>
+                        </div>
+                        <div className="w-1/2 h-full flex justify-between items-center rounded-lg px-2 py-1 gap-1">
+                            <Button className={`w-full h-5 border-none `} value={`Recently`}>Recently</Button>
+                        </div>
                     </div>
-                    <div className="w-1/2 h-full flex justify-between items-center rounded-lg px-2 py-1 gap-1">
-                        <Button className={`w-full h-5 border-none `} value={`Recently`}>Recently</Button>
-                    </div>
-                </div>
-              
+
                     <div className="w-full h-auto flex justify-start items-center p-1 rounded-lg gap-2">
                         <div className="w-full h-auto flex justify-start items-center  rounded-lg gap-1">
                             <div className="w-4 h-4 flex justify-center items-center rounded-lg ">
@@ -221,17 +221,25 @@ export const ModalLayout = ({ isModal,onClose }) => {
                                             </div>
                                         ))}
                                 </React.Fragment>
+
                             );
 
 
                         })
                         }
                     </nav>
+
+
                 })}
 
-               
+               { isModal && <button
+                    onClick={onClose}
+                    className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+                >
+                    ✕
+                </button> }
             </aside>
-             
+
         </>
     );
 };
